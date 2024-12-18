@@ -205,7 +205,7 @@ eb create django-env
 eb setenv SECRET_KEY='YOUR_SECRET_KEY' DATABASE_URL='YOUR_DB_URL'
 ```
 
-Remmplazar por las credenciales correspondientes. Para la base de datos, puede crearse una gratuita en [Tembo](https://tembo.io/). 
+Reemplazar por las credenciales correspondientes. Para la base de datos, puede crearse una gratuita en [Tembo](https://tembo.io/). 
 
 ### 5. Desplegar la aplicación. 
 
