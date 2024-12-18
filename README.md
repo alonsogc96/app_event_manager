@@ -157,6 +157,70 @@ Inicia sesión con las credenciales del superusuario que creaste.
 - **Django Rest Framework (DRF)**: Extensión de Django para crear APIs RESTful.
 - **PostgreSQL**: Bases de datos utilizadas para almacenar datos.
 
+
+
+## Despliegue en AWS Elastic Beanstalk (Opcional)
+
+Para desplegar este proyecto en **AWS Elastic Beanstalk**, seguir los pasos a continuación:
+
+### 1. Instalar la CLI de AWS Elastic Beanstalk
+
+Si aún no tienes instalada la CLI de Elastic Beanstalk, puedes hacerlo siguiendo estos pasos:
+
+1.1 **Configurar AWS CLI**: Si aún no has configurado tu AWS CLI, hazlo con el siguiente comando y sigue las instrucciones para ingresar tus credenciales de AWS:
+
+```
+pip install awscli
+aws configure
+```
+
+1.2 **Instalar la CLI de AWS EB**: 
+
+```
+pip install awsebcli
+```
+
+### 2. Iniciar el repositorio de la CLI de EB 
+
+
+```
+eb init -p python-3.9 django-app
+```
+
+### 3. Crear un entorno e implementar la aplicación en él con eb create. 
+
+```
+eb create django-env
+```
+
+Cuando finalice el proceso de creación del entorno, visualizar el estado con:
+
+```
+eb create django-env
+```
+
+### 4. Configurar las variables de entorno. 
+
+```
+eb setenv SECRET_KEY='YOUR_SECRET_KEY' DATABASE_URL='YOUR_DB_URL'
+```
+
+Remmplazar por las credenciales correspondientes. Para la base de datos, puede crearse una gratuita en [Tembo](https://tembo.io/). 
+
+### 5. Desplegar la aplicación. 
+
+```
+eb deploy
+```
+
+### 6. Abrir la aplicación. 
+
+```
+eb open
+```
+
+Para más detalles sobre el despliegue puede consultar la documentación oficial en [AWS](https://docs.aws.amazon.com/es_es/elasticbeanstalk/latest/dg/create-deploy-python-django.html)
+
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
