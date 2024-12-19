@@ -196,7 +196,7 @@ eb create django-env
 Cuando finalice el proceso de creación del entorno, visualizar el estado con:
 
 ```
-eb create django-env
+eb status django-env
 ```
 
 ### 4. Configurar las variables de entorno. 
